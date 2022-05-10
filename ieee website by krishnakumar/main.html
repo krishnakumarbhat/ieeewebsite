@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="22" >
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>IEEE-SJCE</title>
+</head>
+<body>
+    <header class="text-gray-400 bg-gray-800 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+            <img src="IEEE LOGO1.PNG" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-400 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            
+            <span class="ml-3 text-xl">IEEE-SJCE</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href = "main.html" class="mr-5 hover:text-white"><button CLASS="btn" >HOME</a></button>
+            <a href = "boards.html" class="mr-5 hover:text-white"><button CLASS="btn" >BOARDS</a></button>
+            <a href = "society.html"class="mr-5 hover:text-white"><button CLASS="btn" >SOCIETIES</a></button>
+            <a class="mr-5 hover:text-white"><button CLASS="btn" >TEAM</a></button>
+            <a class="mr-5 hover:text-white"><button CLASS="btn" >GALLERY</a></button>
+            <a href = "contact.html"class="mr-5 hover:text-white"><button CLASS="btn" >CONTACT</a></button>
+          </nav>
+          <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">FEAST
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      
+      
+      
+      
+<!-- animation over here1  -->
+
+
+  <body id="helo">
+     <canvas><h1>IEEE-SJCE</h1></canvas> 
+
+     <dev class="second-txt">
+       <h1>IEEE-SJCE</h1></dev>
+     
+     .second-txt {
+      position: relative;
+      top: 999px;
+      left: 900px;
+  }
+     <script>
+       
+       var canvas = document.querySelector( "canvas" );
+       var W = canvas.width = window.innerWidth;
+       var H = canvas.height = window.innerHeight;
+       var ctx = canvas.getContext( "2d" );
+       ctx.fillStyle = "rgba( 0, 0, 0, 0.3 )";
+       ctx.strokeStyle = "gold";
+       
+       var s = 10, ss = 30, k = 20;
+       
+       function transform( x, y, dt ) {
+         const d = Math.hypot( x, y );
+         const a = - 4*d / W;
+         const cos = Math.cos( a + dt/5e3 ), sin = Math.sin( a + dt/3e3 );
+         var xx = x * cos - y * sin;
+         var yy = x * sin + y * cos;
+         xx *= Math.pow(((W-a)/W), 8)/2;
+         yy *= Math.pow(((W-a)/W), 8)/2;
+         return [ xx, yy ];
+       }
+      //  var dec = prompt("IEEE-SJCE");
+       function draw() {
+         window.requestAnimationFrame( draw );
+         var h = 360 * ( Math.sin( Date.now()/3e3 )/2 + 0.5 );
+         ctx.strokeStyle = `hsl( ${ h }, 50%, 50% )`;
+         ctx.fillRect( 0, 0, W, H );
+         for( var x = -k*ss; x <= k*ss; x += ss )
+         for( var y = -k*ss; y <= k*ss; y += ss ) {
+           var dots = [ x-s/2, y-s/2, x-s/2, y+s/2, x+s/2, y+s/2, x+s/2, y-s/2 ];
+           ctx.beginPath();
+           for( var i = 0; i < dots.length; i += 2 ) {
+             const dot = transform( dots[ i ], dots[ i+1 ], Date.now() );
+             ctx.lineTo( W/2 + dot[ 0 ], H/2 + dot[ 1 ] );
+           }
+           ctx.closePath(); ctx.stroke();
+         }
+       }
+       draw();
+      //  document.write("IEEE-SJCE");
+       
+     </script>
+ </body>
+  
+
+
+ <!-- animation2 over here  --> 
+<div>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"/>
+<style>
+
+body{
+background-color:#000000;
+text-align:center;
+font-family:Nunito,sans-serif;
+text-size-adjust: 76%;
+
+}
+h1{
+margin-top:30px;
+color:teal;
+text-size-adjust: 599px;
+}
+#box{
+margin-top:30px;
+background-color:#000000;
+color:#d8d7d7;
+width:device-width;
+height:210px;
+border:2px solid rgb(0, 0, 0);
+border-radius:3px;
+padding:10px;
+margin-left:5px;
+text-size-adjust: 76%;
+}
+</style>
+</head>
+
+<body>
+<div id="box" class="">
+<h2 id="txt"></h2>
+</div>
+
+<script>
+  
+var str=document.querySelector("#txt");
+
+  var txt="Welcome to IEEE Website.This is just a Dummay Website representing IEEE Website in future might look like";        
+var txtlen=txt.length;
+var pos=-1;
+var t=setInterval(move,200);
+function move(){
+pos++;
+str.innerHTML+=txt.charAt(pos);
+if(pos==txtlen){
+clearInterval(t);
+str.innerHTML="";
+}
+}
+
+</script>
+</pre>
+</div>
+
+
+<!-- event detials -->
+      <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto " data-aos="slide-right">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">EVENT</h2>
+              <h1 class="text-white text-3xl title-font font-medium mb-4">IoT WORKSHOP</h1>
+<pre class="leading-relaxed mb-4">Greetings from IEEE-SJCE!
+IEEE-SJCE RAS is thrilled to announce its signature technical
+event,"IoT WORKSHOP"A 3-day workshop with a lot of learning
+and interesting hands-on sessions.We will be covering protocols
+and all the other important theories, before moving onto the
+more exciting part of simulating them using Raspberry Pi and 
+Node MCU.Since we begin with the basics of IoT, it 
+will be the PERFECTway to kickstart your IoT voyage.
+Kit price: Rs. 900/-
+It is mandatory for each team to have at least one kit.
+
+When: 29th, 30th April & 1st May
+Where: IS Seminar Hall-2
+
+Limited seats only‼️
+
+For further queries, contact:</pre>
+              <div class="flex border-t border-gray-800 py-2">
+                <span class="text-gray-500">Raghavendra G:</span>
+                <span class="ml-auto text-white">8073711862</span>
+              </div>
+              <div class="flex border-t border-gray-800 py-2">
+                <span class="text-gray-500">R Harshith:</span>
+                <span class="ml-auto text-white">8073811955</span>
+              </div>
+              <div class="flex">
+                <span class="title-font font-medium text-1xl text-white"></span>
+                <button class="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-800 rounded">Register</button>
+                <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <img src="iot.png" alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+          </div>
+        </div>
+      </section>
+
+
+      <!-- this is event detials2 -->
+      <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto" data-aos="slide-left">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <img src="wdb.png" alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest"></h2>
+              <h1 class="text-white text-3xl title-font font-medium mb-1">IEEE WDB Recuritment</h1>
+              <div class="flex mb-4">
+                <span class="flex items-center">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                  </svg>
+                  <span class="ml-3">Level</span>
+                </span>
+                <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-800 text-gray-500 space-x-2">
+                  <a>
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+<pre class="leading-relaxed">Greetings from IEEE-SJCE!
+Is web development one of your niche?
+It's time to put on your creative caps, 
+you tech geeks.The Web Development Board 
+of IEEE-SJCE is currently recruiting.Skill set 
+expected from the candidates: Good knowledge of HTML,
+CSS and JS. Knowledge of ReactJS is of added value 
+but is not a compulsion.
+
+Exclusive for II year students.
+
+Please join the WhatsApp group for further updates.
+
+Come be a part of IEEE SJCE and join us to Learn, Teach and Excel!
+
+Apply on or before 22nd April 2022.
+
+For any queries, contact:</pre>
+              <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
+                <div class="flex">
+                  <span class="mr-3">contact :</span>
+                  <button >8240660072</button>
+                  <!-- <button class="border-2 border-gray-800 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
+                  <button class="border-2 border-gray-800 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button> -->
+                </div>
+                <div class="flex ml-6 items-center">
+                  <span class="mr-3">Languages</span>
+                  <div class="relative">
+                    <select class="rounded border border-green-700 focus:ring-2 focus:ring-indigo-900 py-2 focus:outline-none focus:border-indigo-500 text-black pl-3 pr-10">
+                      <option>HTML</option>
+                      <option>CSS</option>
+                      <option>JS</option>
+                      <option>ReactJS</option>
+                    </select>
+                    <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <span class="title-font font-medium text-2xl text-white"></span>
+                <button class="flex ml-auto text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 rounded">Register</button>
+                <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- this is story part -->
+      <section class="text-gray-400 bg-gray-900 body-font">
+        
+        <div class="container px-5 py-24 mx-auto flex flex-wrap" data-aos="zoom-in-up">
+          <h1>PAST EVENT</h1>
+          <div class="flex flex-wrap w-full" data-aos="zoom-in-up">
+            <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+              <div class="flex relative pb-12"data-aos="zoom-in-up">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Orientation Day 2022</h2>
+                  <p class="leading-relaxed">The orientation will be covering all the details regarding IEEE-SJCE and its working, the benefits of the esteemed membership, the various societies and a peek into what is in store!💫</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12" data-aos="zoom-in-up">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4"data-aos="zoom-in-up">
+                  <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Soldering and Etching Workshop</h2>
+                  <p class="leading-relaxed">The Electron Devices Society brings forth yet another one-of-a kind event, SOLDERING AND ETCHING WORKSHOP a 3-day Workshop that gives you a hands-on experience of Soldering and Etching with theoretical and practical sessions</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12"data-aos="zoom-in-up">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4"data-aos="zoom-in-up">
+                  <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Talk-"Research in EECS"</h2>
+                  <p class="leading-relaxed">Electrical Engineering and Computer Science is everywhere. It combines the rigor of science, the power of engineering, and the thrill of discovery.</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12"data-aos="zoom-in-up">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-800 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Image Processing</h2>
+                  <p class="leading-relaxed">The RAS wing is back with IMAGE PROCESSING WORKSHOP a 3-day workshop where we plan to take you from a basic understanding of Image Processing to a self-sufficient one using OpenCV-Python.
+                  </p>
+                </div>
+              </div>
+              <div class="flex relative"data-aos="zoom-in-up">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                  <img src="IEEE LOGO1.PNG"  svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4"data-aos="zoom-in-up">
+                  <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">Just Code It</h2>
+                  <p class="leading-relaxed">To all the geeks out there, it's time to bring out your analytical and problem-solving skills on board. The competitive coding event will comprise of 5 questions with varying levels of difficulty. </p>
+                </div>
+              </div>
+            </div>
+            <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" img src="story.PNG"  alt="step">
+          </div>
+        </div>
+      </section>
+      <!-- what we stand for -->
+      <section class="text-white-400 body-font bg-black-900">
+        <div class="container px-5 py-24 mx-auto "data-aos="zoom-in-up">
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+            <h1 class="sm:text-3xl text-xl font-medium title-font mb-2 text-white">IEEE Bangalore Section</h1>
+            <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80 text-white">IEEE-SJCE has been successfully recognized by IEEE Bangalore section for completing its Silver Jubilee in flying colours. We have also been able to bag the best website award two times in a row.</p>
+          </div>
+          <div class="flex flex-wrap -m-4"data-aos="zoom-in-up">
+            <div class="xl:w-1/3 md:w-1/2 p-4"data-aos="slide-right">
+              <div class="border border-white-700 border-opacity-75 p-6 rounded-lg bg-yellow-100">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-500 text-pink-400 mb-4">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-black font-medium title-font mb-2">HOUSE OF CARDS</h2>
+                <p class="leading-relaxed text-base">A simulation of a political scenario with real world problems. As citizens, we all have voices, but there comes a moment in history which rarely does, such a this. We give you the stage to come and speak about these problems, voice out your opinion, ideas and question the happenings around you. Go through the form descriptions very carefully.</p>
+                <button class="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded text-lg">Register Now</button>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4"data-aos="zoom-in-up  ">
+              <div class="border border-white-700 border-opacity-75 p-6 rounded-lg bg-yellow-100">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-500 text-pink-400 mb-4">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-black font-medium title-font mb-2">IEEEXtreme 15.0</h2>
+                <p class="leading-relaxed text-base">IEEEXtreme is a global challenge in which teams of IEEE Student members - advised and proctored by an IEEE member, and often supported by an IEEE Student Branch compete in a 24-hour time span against each other to solve a set of programming problems.Don't forget to select school as "A48251 - Sri Jayachamarajendra College of Engineering"</p>
+                <button class="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded text-lg">Register Now</button>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4"data-aos="slide-left">
+              <div class="border border-white-700 border-opacity-75 p-6 rounded-lg bg-yellow-100">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-500 text-pink-400 mb-4">
+                  <img src="IEEE LOGO1.PNG" svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-black font-medium title-font mb-2">HAC SAC 2.0</h2>
+                <p class="leading-relaxed text-base">Did someone say hackathon? All the bright-eyed problem solvers get ready because Student Coordination Team – IEEE Bangalore Section is back with HAC SAC 2.0, A Virtual Hackathon. We are proud to bring you the second iteration of HAC SAC with prizes worth 35k for grabs! If you are fond of challenges then HAC SAC 2.0 is for you. This is your opportunity to turn your crazy ideas into reality.</p>
+                <button class="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-700 rounded text-lg">Register Now</button>
+              </div>
+      </section>
+<!--milstone-->
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto" data-aos="zoom-out-up">
+    <div class="flex flex-col" data-aos="zoom-out-up">
+      <div class="h-1 bg-gray-800 rounded overflow-hidden" data-aos="zoom-out-up">
+      </div>
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12" data-aos="zoom-out-up">
+        <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">Milestone Event</h1>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg" data-aos="zoom-out-left">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img src="e1.PNG" img alt="content" class="object-cover object-center h-full w-full" >
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Alumni Podcast
+        </h2>
+        <p class="text-base leading-relaxed mt-2">We have witnessed first hand perspectives of a lucrative education overseas and the possible opportunities it spawns but understanding the admission process can be tedious and difficult.</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg" data-aos="slide-right">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" img src="e2.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Image Processing</h2>
+        <p class="text-base leading-relaxed mt-2">Image processing is everywhere, from editing your photos before you upload it on your Instagram feed to as complex as biomedical image interpretation However getting into the basics of it might be overwhelming and confusing, which is why we're here for you.</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg"data-aos="slide-left">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="e3.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">IEEE ECLECTIC
+        </h2>
+        <p class="text-base leading-relaxed mt-2">Stuck with loads of classes and piling assignments?We're here to change your pace and give you a break from the monotonous routine. IEEE DAY 2021 is just around the corner, and we are excited to present to you IEEE ECLECTIC, a month-long procession of exciting events to amp up our celebrations!</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg"data-aos="zoom-out-left">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="e4.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Webinar by CN</h2>
+        <p class="text-base leading-relaxed mt-2">Internships, Placements and Interviews - do these words make you anxious?! Are you searching for sources to accelerate your preparations to ace those technical interviews?</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col">
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg"data-aos="slide-left">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="e5.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Just Code It</h2>
+        <p class="text-base leading-relaxed mt-2">To all the geeks out there, it's time to bring out your analytical and problem-solving skills on board. The competitive coding event will comprise of 5 questions with varying levels of difficulty.
+          Further instructions will be sent to your respective e-mail IDs upon registration.</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg"data-aos="zoom-out-left">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="e6.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Talk on EECS</h2>
+        <p class="text-base leading-relaxed mt-2">Do you have plans to explore a hardware and software integrated domain and have no idea where to get started? We're here with a one of a kind opportunity.</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg" data-aos="zoom-out-left">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="e7.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Simtool 2.0</h2>
+        <p class="text-base leading-relaxed mt-2">The EDS chapter of IEEE-SJCE brings you a 3-day workshop, SIMTOOL 2.0
+          The workshop focuses mainly on the simulation of various circuits using TINA-TI software and CEDAR logic simulator. Learning these tools will help you simulate various circuits for your projects.
+          It will be an interactive session and e-certificates will be given to the participants.l.</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/4 sm:mb-0 mb-6 bg-yellow-100 border-4 border-gray-900 rounded-lg"data-aos="slide-right">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="e8.PNG">
+        </div>
+        <h2 class="text-xl font-medium title-font text-black mt-5">Python Bootcamp</h2>
+        <p class="text-base leading-relaxed mt-2">In 2021, Python is the most widely used multi-purpose programming language. Name a domain, ... and you'll find Python. In such times, do you wish to learn Python too? And turn your amazing ideas into reality using Python?</p>
+        <a class="text-indigo-700 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- here is about faculty -->
+
+
+
+
+
+
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto "data-aos="zoom-out-up">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="text-2xl font-medium title-font mb-4 text-white">Faculty</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
+    </div>
+    <div class="flex flex-wrap -m-4 "data-aos="zoom-in-up">
+      <div class="p-4 lg:w-1/5 md:w-1/2 border-4 border-gray-900 rounded-lg bg-yellow-100 md:w-1/2"data-aos="slide-left">
+        <div class="h-full flex flex-col items-center text-center" data-aos="slide-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" img src="a1.PNG">
+          <div class="w-full"data-aos="slide-left">
+            <h2 class="title-font font-medium text-lg text-black">MS. SUPREETHA M</h2>
+            <h3 class="text-gray-500 mb-3">WIE ADVISOR </h3>
+            <p class="mb-4">shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 sioehw8 g/lsm.</p>
+            <span class="inline-flex">
+              <a class="text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 lg:w-1/5 md:w-1/2 border-4 border-gray-900 rounded-lg bg-yellow-100 md:w-1/2 " data-aos="slide-left">
+        <div class="h-full flex flex-col items-center text-center"data-aos="slide-left">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" img src="a2.PNG">
+          <div class="w-full" data-aos="slide-left">
+            <h2 class="title-font font-medium text-lg text-black">DR. SUDARSHAN P K</h2>
+            <h3 class="text-gray-500 mb-3">RAS ADVISOR</h3>
+            <p class="mb-4">shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 sioehw8 g/lsm.</p>
+            <span class="inline-flex">
+              <a class="text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 lg:w-1/5 md:w-1/2 border-4 border-gray-900 rounded-lg bg-yellow-100 md:w-1/2"data-aos="zoom-in-up">
+        <div class="h-full flex flex-col items-center text-center"data-aos="zoom-in-up">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" img src="a3.PNG">
+          <div class="w-full"data-aos="slide-right">
+            <h2 class="title-font font-medium text-lg text-black">DR. S B RUDRASWAMY</h2>
+            <h3 class="text-gray-500 mb-3">EDS ADVISOR
+            </h3>
+            <p class="mb-4">shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 sioehw8 g/lsm.</p>
+            <span class="inline-flex">
+              <a class="text-gray-700"data-aos="slide-right">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 lg:w-1/5 md:w-1/2 border-4 border-gray-900 rounded-lg bg-yellow-100 md:w-1/2"data-aos="slide-right">
+        <div class="h-full flex flex-col items-center text-center"data-aos="slide-right">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" img src="a4.PNG">
+          <div class="w-full"data-aos="slide-right">
+            <h2 class="title-font font-medium text-lg text-black">MR. SHASHIDHAR R</h2>
+            <h3 class="text-gray-500 mb-3">SBMDC ADVISOR</h3>
+            <p class="mb-4">shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 sioehw8 g/lsm.</p>
+            <span class="inline-flex">
+              <a class="text-gray-700"data-aos="slide-right">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 lg:w-1/5 md:w-1/2 border-4 border-gray-900 rounded-lg bg-yellow-100 md:w-1/2"data-aos="slide-right">
+        <div class="h-full flex flex-col items-center text-center"data-aos="slide-right">
+          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" img src="a5.PNG">
+          <div class="w-full"data-aos="zoom-in-up">
+            <h2 class="title-font font-medium text-lg text-black">DR. M G VEENA</h2>
+            <h3 class="text-gray-500 mb-3">BRANCH COUNSELOR</h3>
+            <p class="mb-4">shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4 sioehw8 g/lsm.</p>
+            <span class="inline-flex">
+              <a class="text-gray-700"data-aos="slide-right">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-700">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- banglore section   -->
+    <section class="text-gray-400 bg-black-900 body-font">
+      <div class="container px-5 py-24 mx-auto "data-aos="zoom-in-up">
+        <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Flagship Events</h1>
+          <!-- <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80">IEEE-SJCE has been successfully recognized by IEEE Bangalore section for completing its Silver Jubilee in flying colours. We have also been able to bag the best website award two times in a row.</p> -->
+        </div>
+
+  
+    <!-- flagship 1 -->
+    <section class="text-white-400 bg-black-900 body-font">
+      <div class="container px-5 py-24 mx-auto "data-aos="zoom-in-up">
+        <div class="flex flex-wrap -m-4"data-aos="zoom-in-up">
+          <div class="p-4 lg:w-1/3"data-aos="slide-left">
+            <div class="h-full bg-opacity-100 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative bg-yellow-100">
+              <h2 class="tracking-widest text-xl title-font font-Large text-gray-900 mb-1">IEEE R10 HTC</h2>
+              <h1 class="title-font sm:text-xl text-s font-small text-gray-600 mb-3">IEEE Region 10 Humanitarian Technology Conference (R10 HTC) is a premier annual cross-disciplinary conference. It provides a common platform for engineers, technologists, scientists, representatives from NGOs, governments, academia, industry and investors to discuss recent advances in Humanitarian Technologies.</p>
+              <a class="text-blue-600 inline-flex items-center">Register Now
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>63K
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>5
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/3"data-aos="zoom-in-up"data-aos="zoom-in-up">
+            <div class="h-full bg-opacity-100 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative bg-yellow-100"data-aos="zoom-in-up">
+              <h2 class="tracking-widest text-xl title-font font-Large text-gray-900 mb-1">IEEE BTC</h2>
+              <h1 class="title-font sm:text-xl text-xl font-medium text-gray-600 mb-3">Welcome to the 2nd edition of IEEE Bangalore Technology Conclave (BTC) on the theme Clean Technologies for a Sustainable World. IEEE BTC 2021 is a flagship event of IEEE Bangalore Section, organized in collaboration with its two affinity groups - Women in Engineering (WiE) and Young Professionals (YP).</h1>
+              
+              <a class="text-blue-600 inline-flex items-center">Register Now
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>15K
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>8
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/3"data-aos="slide-right">
+            <div class="h-full bg-opacity-100 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative bg-yellow-100">
+              <h2 class="tracking-widest text-xl title-font font-Large text-gray-900 mb-1">IEEE Connect</h2>
+              <h1 class="title-font sm:text-xl text-s font-small text-gray-600 mb-3">International Conference on Electronics, Computing and Communication Technologies, CONECET is a flagship conference of the IEEE Bangalore Section, India. The conference features plenary talks, workshops and invited papers by distinguished researchers and technologists .</h1>              
+              <a class="text-blue-600 inline-flex items-center">Register Now
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>82K
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>59
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- flagship 2 -->
+    <section class="text-white-400 bg-black-900 body-font">
+      <div class="container px-5 py-24 mx-auto bg-white-900">
+        <div class="flex flex-wrap -m-4"data-aos="zoom-in-up">
+          <div class="p-4 lg:w-1/3"data-aos="slide-right">
+            <div class="h-full bg-yellow-100 bg-opacity-100 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <h2 class="tracking-widest text-xl title-font font-Large text-gray-900 mb-1">IEEE SPS </h2>
+              <h1 class="title-font sm:text-xl text-xl font-medium text-gray-600 mb-3">The highlights of the IEEE SPS forum are as follows:
+                ● It is aimed at networking in the area of Image and Video Signal Processing to industry members.
+                ● Bridge the gap between Industry and Educational Institution.
+                ● It consists of presentations, lectures, and demos by industry experts</h1>
+              <a class="text-blue-600 inline-flex items-center">Register Now
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>1.2K
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>6
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/3" data-aos="zoom-in-up">
+            <div class="h-full bg-yellow-100 bg-opacity-100 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <h2 class="tracking-widest text-xl title-font font-Large text-gray-900 mb-1">IEEE CPS</h2>
+              <h1 class="title-font sm:text-xl text-xl font-medium text-gray-600 mb-3">Cyber-Physical Systems (CPS) are integrations of computation, networking, and physical processes. In cyber-physical systems, computers and networks monitor and control the physical processes, with feedback loops where physical processes affect computations and vice versa. CPS has the ability to support complex behaviours of systems and networks.</h1>
+              <a class="text-blue-600 inline-flex items-center">Register Now
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>2K
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>7
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/3"data-aos="slide-left">
+            <div class="h-full bg-yellow-100 bg-opacity-100 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <h2 class="tracking-widest text-xl title-font font-Large text-gray-900 mb-1">IEEE DSS 2021</h2>
+              <h1 class="title-font sm:text-xl text-xl font-medium text-gray-600 mb-3">With the fast changing scenarios, and the needs to solve imminent challenges even faster in the Health and Life Sciences, Energy, Weather Prediction, Seismic Processing and allied areas . Scalable AI lends a helping hand but also needs higher performing infrastructure to support it. Data Storage technologies is increasingly playing a central role .</h1>
+              <a class="text-blue-600 inline-flex items-center">Register Now
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>1.2K
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>6
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- fotter -->
+
+<footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"data-aos="zoom-in-up">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img src="IEEE LOGO1.PNG"fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">IEEE-SJCE</span>
+      </a>
+      <p class="mt-2 text-L text-WHITE-500">IMAGINE! INNOVATE! INSPIRE!</p>
+      <p class="mt-2 text-L text-GREY-500">IEEE-SJCE conducts many events regularly for students to gain knowledge and encourages them to take active part in all of them.</p>
+    </div>
+    <!-- <!-- <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Fourth Link</a>
+          </li>
+        </nav>
+      </div> -->
+
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">CONTACT US</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE-SJCE student branch
+              Sri Jayachamarajendra College of Engineering
+              Mysuru, 570006</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Phone: +(91) 6205701439k</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">Email: ieeesjce2019@gmail.com</a>
+          </li>
+        </nav>
+      </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">IMPORTANT LINKS</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE Xplore Digital Library</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE EDS</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE RAS</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE-Bengaluru section</a>
+          </li>
+        </nav>
+      </div> 
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">IMPORTANT LINKS</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-400 hover:text-white">JSS STU </a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE.org</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE WIE</a>
+          </li>
+          <li>
+            <a class="text-gray-400 hover:text-white">IEEE Standards</a>
+
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-800 bg-opacity-75">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-400 text-sm text-center sm:text-left">© 2022 IEEE-SJCE
+        <a class="text-gray-500 ml-1" rel="noopener noreferrer" target="_blank">@all copywrite applied</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a href="https://facebook.com/"  class="text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://twitter.com/" class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a href="https://instagram.com/" class="ml-3 text-gray-400">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="https://linkdin.com/"  class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</html>
+
+
+
+
+
+
+
+
